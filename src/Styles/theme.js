@@ -1,6 +1,6 @@
-import { css } from 'styled-components'; // eslint-disable-line no-unused-vars
+import { css } from "styled-components"; // eslint-disable-line no-unused-vars
 
-const calRem = size => `${size / 16}rem`;
+const calRem = (size) => `${size / 16}rem`;
 
 const fontSize = {
   12: calRem(12),
@@ -25,31 +25,31 @@ const fontWeight = {
 
 const color = {
   // 가장 진한 색이 1이며, 숫자가 커질수록 점점 옅은 색으로 셋팅해두었습니다.
-  gray1: '#5A5A5A',
-  gray2: '#8C8C8C',
-  gray3: '#C4C4C4',
-  gray4: '#9E9E9E',
-  gray5: '#E9E9E9',
-  orange: '#F84914',
-  black: '#292929',
-  realblack: '#000000',
+  gray1: "#5A5A5A",
+  gray2: "#8C8C8C",
+  gray3: "#C4C4C4",
+  gray4: "#9E9E9E",
+  gray5: "#E5E5E5",
+  orange: "#F84914",
+  black: "#292929",
+  realblack: "#000000",
 
-  mainBlue: '#5327ff',
-  mainMint: '#83ffca',
-  mainGray: '#dedfe0',
-  white: '#fff',
-  mint: '#bcffe2',
-  blue1: '#8689ff',
-  blue2: '#afb1ff',
-  blue3: '#d8d9ff',
+  mainBlue: "#5327ff",
+  mainMint: "#83ffca",
+  mainGray: "#dedfe0",
+  white: "#fff",
+  mint: "#bcffe2",
+  blue1: "#8689ff",
+  blue2: "#afb1ff",
+  blue3: "#d8d9ff",
 
-  darkLine: '#3F4448',
-  danger: '#ff8b6f',
+  darkLine: "#3F4448",
+  danger: "#ff8b6f",
 };
 const deviceSizes = {
-  mobile: '375px',
-  tablet: '768px',
-  laptop: '1024px',
+  mobile: "375px",
+  tablet: "768px",
+  laptop: "1024px",
 };
 
 const device = {
@@ -67,12 +67,12 @@ const theme = {
 };
 
 const dot = {
-  height: '8px',
-  width: '8px',
-  background: '#f87171',
-  border: '50%',
-  display: 'flex',
-  margin: '1px',
+  height: "8px",
+  width: "8px",
+  background: "#f87171",
+  border: "50%",
+  display: "flex",
+  margin: "1px",
 };
 
 export default theme;

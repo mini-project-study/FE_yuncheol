@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import Login from "../pages/Login";
+import Profile from "../pages/Profile";
 import Main from "../pages/Main";
 import theme from "../Styles/theme";
 import Header from "./Header";
@@ -13,7 +13,7 @@ const MainRouter = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </ThemeProvider>
     </>

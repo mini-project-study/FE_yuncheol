@@ -90,8 +90,8 @@ const ElButton = styled.button`
           props.disabled
             ? `background-color:${theme.color.orange};
             color: ${theme.color.white};`
-            : `background-color:${theme.color.gray5};
-            color: ${theme.color.gray1};`}
+            : `background-color:${theme.color.realblack};
+            color: ${theme.color.white};`}
   ${(props) => (props.margin ? `margin: ${props.margin};` : "")}
 `;
 
