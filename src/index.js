@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import GlobalStyle from "./Styles/GlobalStyle";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
+import Loading from "./shared/Loading";
 
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
+      {/* <Suspense fallback={<Loading />}> */}
       <GlobalStyle />
       <BrowserRouter>
         <App />
       </BrowserRouter>
+      {/* </Suspense> */}
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")

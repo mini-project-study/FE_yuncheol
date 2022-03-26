@@ -1,11 +1,26 @@
 import React, { useState } from "react";
+import { useRecoilState } from "recoil";
 import { Grid, Modalel, Text, Input, Button } from "../elements";
+import { userState } from "../recoil/member";
+import { URL } from "../shared/API";
 
 const Login = (props) => {
-  const [id, setId] = React.useState("");
-  const [pwd, setPwd] = React.useState("");
-  const loginAxios = () => {
-    console.log("login", id, pwd);
+  const [id, setId] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [UserData, setUserData] = useRecoilState(userState);
+  const loginbutton = async () => {
+    try {
+      console.log("login", id, pwd);
+      const data = {
+        email: "4444@naver.com",
+        password: "1111",
+      };
+      const res = await URL.post("/login", data).data;
+      console.log(res);
+      setUserData(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <Modalel
@@ -47,7 +62,7 @@ const Login = (props) => {
           <Text cursor="pointer">회원가입</Text>
         </Grid>
         <Grid padding="12px">
-          <Button _onClick={loginAxios}>로그인</Button>
+          <Button _onClick={loginbutton}>로그인</Button>
         </Grid>
       </>
     </Modalel>

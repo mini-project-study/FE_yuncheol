@@ -21,8 +21,12 @@ const Main = () => {
       .catch((error) => console.log(error));
   }
   async function linkcheck() {
+    const data = {
+      email: "4444@naver.com",
+      password: "1111",
+    };
     await axios
-      .post(helloURL)
+      .post("http://184.72.42.251:8080/login", data)
       .then((res) => {
         console.log(res);
         setSelechello(true);
@@ -33,6 +37,18 @@ const Main = () => {
         setSelechello(false);
         setTest(JSON.stringify(error));
       });
+    // await axios
+    //   .get("http://184.72.42.251:8080/hello")
+    //   .then((res) => {
+    //     console.log(res);
+    //     setSelechello(true);
+    //     setTest(JSON.stringify(res));
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.message);
+    //     setSelechello(false);
+    //     setTest(JSON.stringify(error));
+    //   });
   }
   return (
     <>
